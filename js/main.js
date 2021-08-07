@@ -14,7 +14,6 @@ var toggleFullScreenButton;
 var switchCameraButton;
 var amountOfCameras = 0;
 var currentFacingMode = 'environment';
-var photo = document.querySelector('#photo'),
 
 // this function counts the amount of video inputs
 // it replaces DetectRTC that was previously implemented.
@@ -242,8 +241,7 @@ function takeSnapshot() {
 
   context = canvas.getContext('2d');
   context.drawImage(video, 0, 0, width, height);
-  var data = canvas.toDataURL('image/png');
-  photo.setAttribute('src', data);
+
 
   // polyfil if needed https://github.com/blueimp/JavaScript-Canvas-to-Blob
 
